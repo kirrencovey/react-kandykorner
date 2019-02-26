@@ -8,12 +8,12 @@ class CandyList extends Component {
             <section className="candies">
                 <h2>Candies</h2>
                 {
-                    this.props.candies.map(candy =>
-                        <div key={`candy-${candy.id}`}>
-                            <Candy candy={candy.name}
-                                type={
-                                    this.props.candyTypes.find(ct => ct.id === candy.candyTypeId).name
-                                }/>
+                    this.props.candyTypes.map(type =>
+                        <div key={`candyType-${type.id}`}>
+                            <h3>{type.name} Candies</h3>
+                            <Candy candies={
+                                this.props.candies.filter(candy => candy.candyTypeId === type.id)
+                            }/>
                         </div>
                     )
                 }
