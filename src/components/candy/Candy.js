@@ -4,11 +4,15 @@ import React, { Component } from "react"
 class Candy extends Component {
     render() {
         return (
-            <section className="candy">
-                <div>
-                    {this.props.candy}, <i>{this.props.type}</i>
-                </div>
-            </section>
+            <div className="candy">
+                {
+                    this.props.candies.map(candy =>
+                        <div key={`candy-${candy.id}`}>
+                            {candy.name}
+                        </div>
+                    )
+                }
+            </div>
         )
     }
 }

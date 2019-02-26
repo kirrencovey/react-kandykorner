@@ -33,7 +33,11 @@ class KandyKorner extends Component {
         { id: 2, name: "Jolly Rancher", candyTypeId: 1 },
         { id: 3, name: "Laffy Taffy", candyTypeId: 5 },
         { id: 4, name: "Sour Worms", candyTypeId: 2 },
-        { id: 5, name: "Snickers", candyTypeId: 3 }
+        { id: 5, name: "Snickers", candyTypeId: 3 },
+        { id: 6, name: "Reeses", candyTypeId: 4 },
+        { id: 7, name: "Milky Way", candyTypeId: 3 },
+        { id: 8, name: "Gummy Bears", candyTypeId: 2 },
+        { id: 9, name: "LifeSavers", candyTypeId: 1 }
     ]
 
     state = {
