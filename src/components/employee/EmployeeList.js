@@ -1,18 +1,21 @@
 import React, { Component } from "react"
+import './Employee.css'
 
 
 class EmployeeList extends Component {
     render() {
         return (
-            <section className="employees">
-                <h2>Employees</h2>
+            <section className="employeeSection">
+                <div className="employees">
                 {
                     this.props.employees.map(employee =>
-                        <div key={`employee-${employee.id}`}>
-                            {employee.name}
+                        <div className="employee" key={`employee-${employee.id}`}>
+                            <h3>{employee.name}</h3>
+                            <div>{employee.position}</div>
                         </div>
                     )
                 }
+                </div>
             </section>
         )
     }

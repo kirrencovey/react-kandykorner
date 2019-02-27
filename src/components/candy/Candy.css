@@ -1,0 +1,12 @@
+.candies {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.candy {
+    background-color: rgb(182, 220, 255);
+    padding: 0px 20px 20px 20px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 5px 5px rgb(112, 148, 216);
+}
