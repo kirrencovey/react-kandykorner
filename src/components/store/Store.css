@@ -1,0 +1,13 @@
+.stores {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+}
+
+.store {
+    background-color: paleturquoise;
+    padding: 0px 20px 20px 20px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 5px 5px turquoise;
+}

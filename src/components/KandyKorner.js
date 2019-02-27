@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import CandyList from './candy/CandyList'
 import EmployeeList from './employee/EmployeeList'
 import StoreList from './store/StoreList'
+import './KandyKorner.css'
 
 
 class KandyKorner extends Component {
@@ -12,12 +13,10 @@ class KandyKorner extends Component {
     ]
 
     employeeArray = [
-        { id: 1, name: "Willy Wonka" },
-        { id: 2, name: "Henry Hershey" },
-        { id: 3, name: "Mo" },
-        { id: 4, name: "Nathan" },
-        { id: 5, name: "Warner" },
-        { id: 6, name: "Kirren" }
+        { id: 1, name: "Mo", position: "HBIC of Sugar"},
+        { id: 2, name: "Nathan", position: "Lead Candy Sampler" },
+        { id: 3, name: "Warner", position: "Web Design & Marketing" },
+        { id: 4, name: "Kirren", position: "Nap Coordinater" }
     ]
 
     candyTypeArray = [
@@ -50,6 +49,7 @@ class KandyKorner extends Component {
     render() {
         return (
             <section className="kandyKorner">
+            <h1 class="title">Welcome to Kandy Korner</h1>
                 <StoreList stores={this.state.stores} />
                 <EmployeeList employees={this.state.employees} />
                 <CandyList candyTypes={this.state.candyTypes}

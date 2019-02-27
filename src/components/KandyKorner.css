@@ -1,0 +1,19 @@
+.title {
+    font-size: 3em;
+    font-size: 60px;
+    animation: rainbow infinite 1s linear;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+@keyframes rainbow {
+    0%   {color: lightpink;}
+    15%  {color: orange;}
+    30%  {color: yellow;}
+    45%  {color: lightgreen;}
+    60%  {color: turquoise;}
+    75%  {color: lightblue;}
+    90% {color: violet;}
+    100% {color: pink;}
+  }

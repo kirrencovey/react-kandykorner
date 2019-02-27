@@ -1,19 +1,22 @@
 import React, { Component } from "react"
+import './Store.css'
 
 
 class StoreList extends Component {
     render() {
         return (
-            <section className="stores">
+            <section className="storeSection">
                 <h2>Stores</h2>
+                <div class="stores">
                 {
                     this.props.stores.map(store =>
-                        <div key={`store-${store.id}`}>
-                            <strong>{store.name}</strong><br />
-                            {store.address}
+                        <div class="store" key={`store-${store.id}`}>
+                            <h3>{store.name}</h3>
+                            <div>{store.address}</div>
                         </div>
                     )
                 }
+                </div>
             </section>
         )
     }
