@@ -7,7 +7,6 @@ class CandyList extends Component {
     render() {
         return (
             <section className="candySection">
-                <h2>Candies</h2>
                 <div className="candies">
                 {
                     this.props.candyTypes.map(type =>

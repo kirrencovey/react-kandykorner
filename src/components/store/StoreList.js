@@ -6,7 +6,6 @@ class StoreList extends Component {
     render() {
         return (
             <section className="storeSection">
-                <h2>Stores</h2>
                 <div className="stores">
                 {
                     this.props.stores.map(store =>

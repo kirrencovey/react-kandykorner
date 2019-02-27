@@ -49,11 +49,16 @@ class ApplicationViews extends Component {
     render() {
         return (
             <React.Fragment>
-            <h1 className="title">Welcome to Kandy Korner</h1>
-                <StoreList stores={this.state.stores} />
-                <EmployeeList employees={this.state.employees} />
-                <CandyList candyTypes={this.state.candyTypes}
-                    candies={this.state.candies} />
+                <Route exact path="/" render={(props) => {
+                    return<StoreList stores={this.state.stores} />
+                }} />
+                <Route exact path="/employees" render={(props) => {
+                    return <EmployeeList employees={this.state.employees} />
+                }} />
+                <Route exact path="/candies" render={(props) => {
+                    return <CandyList candyTypes={this.state.candyTypes}
+                                candies={this.state.candies} />
+                }} />
             </React.Fragment>
         )
     }

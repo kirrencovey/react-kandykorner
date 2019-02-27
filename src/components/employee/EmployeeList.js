@@ -6,7 +6,6 @@ class EmployeeList extends Component {
     render() {
         return (
             <section className="employeeSection">
-                <h2>Employees</h2>
                 <div className="employees">
                 {
                     this.props.employees.map(employee =>
