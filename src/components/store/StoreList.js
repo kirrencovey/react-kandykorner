@@ -7,10 +7,10 @@ class StoreList extends Component {
         return (
             <section className="storeSection">
                 <h2>Stores</h2>
-                <div class="stores">
+                <div className="stores">
                 {
                     this.props.stores.map(store =>
-                        <div class="store" key={`store-${store.id}`}>
+                        <div className="store" key={`store-${store.id}`}>
                             <h3>{store.name}</h3>
                             <div>{store.address}</div>
                         </div>

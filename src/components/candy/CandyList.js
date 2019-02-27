@@ -8,7 +8,7 @@ class CandyList extends Component {
         return (
             <section className="candySection">
                 <h2>Candies</h2>
-                <div class="candies">
+                <div className="candies">
                 {
                     this.props.candyTypes.map(type =>
                         <div className="candy" key={`candyType-${type.id}`}>
