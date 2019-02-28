@@ -1,10 +1,12 @@
 .title {
-    font-size: 4em;
+    font-size: 5em;
     animation: rainbow infinite 1.5s linear;
     background-color: white;
     border-radius: 20px;
-    padding: 50px 10px 30px 10px;
+    padding: 30px 10px 30px 10px;
     text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
 }
 
 @keyframes rainbow {

@@ -1,30 +1,105 @@
 {
-    "stores": [
-        { "id": 1, "name": "Kandy Korner", "address": "123 Sugar Street" },
-        { "id": 2, "name": "Kandy Kraze", "address": "808 Licorice Drive" }
-    ],
-    "employees": [
-        { "id": 1, "name": "Mo", "position": "HBIC of Sugar"},
-        { "id": 2, "name": "Nathan", "position": "Lead Candy Sampler" },
-        { "id": 3, "name": "Warner", "position": "Web Design & Marketing" },
-        { "id": 4, "name": "Kirren", "position": "Nap Coordinater" }
-    ],
-    "candyTypes": [
-        { "id": 1, "name": "Hard" },
-        { "id": 2, "name": "Gummy" },
-        { "id": 3, "name": "Bar" },
-        { "id": 4, "name": "Chocolate" },
-        { "id": 5, "name": "Other" }
-    ],
-    "candies": [
-        { "id": 1, "name": "Dove Promise", "candyTypeId": 4 },
-        { "id": 2, "name": "Jolly Rancher", "candyTypeId": 1 },
-        { "id": 3, "name": "Laffy Taffy", "candyTypeId": 5 },
-        { "id": 4, "name": "Sour Worms", "candyTypeId": 2 },
-        { "id": 5, "name": "Snickers", "candyTypeId": 3 },
-        { "id": 6, "name": "Reeses", "candyTypeId": 4 },
-        { "id": 7, "name": "Milky Way", "candyTypeId": 3 },
-        { "id": 8, "name": "Gummy Bears", "candyTypeId": 2 },
-        { "id": 9, "name": "LifeSavers", "candyTypeId": 1 }
-    ]
+  "stores": [
+    {
+      "id": 1,
+      "name": "Kandy Korner",
+      "address": "123 Sugar Street"
+    },
+    {
+      "id": 2,
+      "name": "Kandy Kraze",
+      "address": "808 Licorice Drive"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Mo",
+      "position": "HBIC of Sugar"
+    },
+    {
+      "id": 2,
+      "name": "Nathan",
+      "position": "Lead Candy Sampler"
+    },
+    {
+      "id": 3,
+      "name": "Warner",
+      "position": "Web Design & Marketing"
+    },
+    {
+      "id": 4,
+      "name": "Kirren",
+      "position": "Nap Coordinater"
+    }
+  ],
+  "candyTypes": [
+    {
+      "id": 1,
+      "name": "Hard"
+    },
+    {
+      "id": 2,
+      "name": "Gummy"
+    },
+    {
+      "id": 3,
+      "name": "Bar"
+    },
+    {
+      "id": 4,
+      "name": "Chocolate"
+    },
+    {
+      "id": 5,
+      "name": "Other"
+    }
+  ],
+  "candies": [
+    {
+      "id": 1,
+      "name": "Dove Promise",
+      "candyTypeId": 4
+    },
+    {
+      "id": 2,
+      "name": "Jolly Rancher",
+      "candyTypeId": 1
+    },
+    {
+      "id": 4,
+      "name": "Sour Worms",
+      "candyTypeId": 2
+    },
+    {
+      "id": 5,
+      "name": "Snickers",
+      "candyTypeId": 3
+    },
+    {
+      "id": 6,
+      "name": "Reeses",
+      "candyTypeId": 4
+    },
+    {
+      "id": 7,
+      "name": "Milky Way",
+      "candyTypeId": 3
+    },
+    {
+      "id": 8,
+      "name": "Gummy Bears",
+      "candyTypeId": 2
+    },
+    {
+      "id": 9,
+      "name": "LifeSavers",
+      "candyTypeId": 1
+    },
+    {
+      "id": 10,
+      "name": "Laffy Taffy",
+      "candyTypeId": 5
+    }
+  ]
 }
