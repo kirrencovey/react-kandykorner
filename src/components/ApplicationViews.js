@@ -14,6 +14,15 @@ class ApplicationViews extends Component {
         candies: []
     }
 
+    deleteCandy = (id) => {
+        fetch(`http://localhost:5002/candies/${id}`, {
+            "method": "DELETE"
+        })
+            .then(() => fetch("http://localhost:5002/candies")
+            .then(r => r.json()))
+            .then(candies => this.setState({ candies: candies }))
+    }
+
     componentDidMount() {
         const newState = {}
 
@@ -43,7 +52,8 @@ class ApplicationViews extends Component {
                 }} />
                 <Route exact path="/candies" render={(props) => {
                     return <CandyList candyTypes={this.state.candyTypes}
-                                candies={this.state.candies} />
+                                candies={this.state.candies}
+                                deleteCandy={this.deleteCandy} />
                 }} />
             </React.Fragment>
         )

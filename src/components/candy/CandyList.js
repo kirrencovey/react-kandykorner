@@ -14,7 +14,8 @@ class CandyList extends Component {
                             <h3>{type.name} Candies</h3>
                             <Candy candies={
                                 this.props.candies.filter(candy => candy.candyTypeId === type.id)
-                            }/>
+                            }
+                                deleteCandy={this.props.deleteCandy} />
                         </div>
                     )
                 }
