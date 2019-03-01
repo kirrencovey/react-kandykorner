@@ -19,24 +19,20 @@ class ApplicationViews extends Component {
     }
 
     deleteCandy = (id) => {
-        fetch(`http://localhost:5002/candies/${id}`, {
-            "method": "DELETE"
-        })
-            .then(() => fetch("http://localhost:5002/candies")
-            .then(r => r.json()))
+        CandyManager.delete(id, "candies")
             .then(candies => this.setState({ candies: candies }))
     }
 
     componentDidMount() {
         const newState = {}
 
-        CandyManager.getAll()
+        CandyManager.getAll("candies")
             .then(candies => newState.candies = candies)
-            .then(() => EmployeeManager.getAll())
+            .then(() => EmployeeManager.getAll("employees"))
             .then(employees => newState.employees = employees)
-            .then(() => StoreManager.getAll())
+            .then(() => StoreManager.getAll("stores"))
             .then(stores => newState.stores = stores)
-            .then(() => CandyTypeManager.getAll())
+            .then(() => CandyTypeManager.getAll("candyTypes"))
             .then(candyTypes => newState.candyTypes = candyTypes)
             .then(() => this.setState(newState))
     }
