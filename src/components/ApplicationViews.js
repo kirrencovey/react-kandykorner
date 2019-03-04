@@ -7,6 +7,8 @@ import CandyManager from '../modules/CandyManager'
 import CandyTypeManager from "../modules/CandyTypeManager"
 import EmployeeManager from "../modules/EmployeeManager"
 import StoreManager from "../modules/StoreManager"
+import EmployeeForm from "./employee/EmployeeForm"
+import CandyForm from "./candy/CandyForm"
 
 
 class ApplicationViews extends Component {
@@ -22,6 +24,24 @@ class ApplicationViews extends Component {
         CandyManager.delete(id, "candies")
             .then(candies => this.setState({ candies: candies }))
     }
+
+    addCandy = candy =>
+        CandyManager.addCandy(candy)
+            .then(() => CandyManager.getAll("candies"))
+            .then(candies =>
+                this.setState({
+                    candies: candies
+                })
+            )
+
+    addEmployee = employee =>
+        EmployeeManager.addEmployee(employee)
+            .then(() => EmployeeManager.getAll("employees"))
+            .then(employees =>
+                this.setState({
+                    employees: employees
+                })
+            );
 
     componentDidMount() {
         const newState = {}
@@ -44,12 +64,23 @@ class ApplicationViews extends Component {
                     return<StoreList stores={this.state.stores} />
                 }} />
                 <Route exact path="/employees" render={(props) => {
-                    return <EmployeeList employees={this.state.employees} />
+                    return <EmployeeList {...props}
+                                employees={this.state.employees} />
+                }} />
+                <Route path="/employees/new" render={(props) => {
+                    return <EmployeeForm {...props}
+                                    addEmployee={this.addEmployee} />
                 }} />
                 <Route exact path="/candies" render={(props) => {
-                    return <CandyList candyTypes={this.state.candyTypes}
+                    return <CandyList {...props}
+                                candyTypes={this.state.candyTypes}
                                 candies={this.state.candies}
                                 deleteCandy={this.deleteCandy} />
+                }} />
+                <Route path="/candies/new" render={(props) => {
+                    return <CandyForm {...props}
+                                addCandy={this.addCandy}
+                                candyTypes={this.state.candyTypes} />
                 }} />
             </React.Fragment>
         )
